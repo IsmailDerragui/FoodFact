@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+                                   xmlns:app="http://schemas.android.com/apk/res-auto"
+                                   xmlns:tools="http://schemas.android.com/tools"
+                                   android:id="@+id/product_item_card"
+                                   android:layout_width="match_parent"
+                                   android:layout_height="wrap_content"
+                                   android:layout_margin="15dp"
+                                   app:cardCornerRadius="10dp"
+                                   android:foreground="?attr/selectableItemBackground"
+                                   tools:ignore="ContentDescription">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="15dp">
+
+        <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/product_item_guideline_start"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_begin="15dp" />
+
+        <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/product_item_guideline_end"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_end="15dp" />
+
+        <ImageView
+                android:id="@+id/product_item_image"
+                android:layout_width="0dp"
+                android:layout_height="248dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:src="@drawable/placeholder" />
+
+        <TextView
+                android:id="@+id/product_name"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toStartOf="@id/product_bookmark"
+                app:layout_constraintStart_toStartOf="@id/product_item_guideline_start"
+                app:layout_constraintTop_toBottomOf="@id/product_item_image"
+                tools:text="Petits pois et carottes" />
+
+        <TextView
+                android:id="@+id/product_brand"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:textSize="15sp"
+                app:layout_constraintEnd_toStartOf="@id/product_bookmark"
+                app:layout_constraintStart_toStartOf="@id/product_item_guideline_start"
+                app:layout_constraintTop_toBottomOf="@id/product_name"
+                tools:text="Cassegrain" />
+
+        <ImageView
+                android:id="@+id/product_bookmark"
+                android:layout_width="18dp"
+                android:layout_height="32dp"
+                app:layout_constraintBottom_toBottomOf="@id/product_brand"
+                app:layout_constraintEnd_toStartOf="@id/product_item_guideline_end"
+                app:layout_constraintTop_toTopOf="@id/product_name"
+                app:srcCompat="@drawable/ic_nav_bar_bookmarks" />
+
+        <TextView
+                android:id="@+id/product_nutriscore"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:drawableStart="@drawable/ic_ranking"
+                android:drawableLeft="@drawable/ic_ranking"
+                android:drawablePadding="3dp"
+                android:paddingBottom="15dp"
+                android:textSize="14sp"
+                app:layout_constraintEnd_toStartOf="@id/product_calories"
+                app:layout_constraintStart_toStartOf="@id/product_item_guideline_start"
+                app:layout_constraintTop_toBottomOf="@id/product_brand"
+                tools:text="Nutriscore : A" />
+
+        <TextView
+                android:id="@+id/product_calories"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableStart="@drawable/ic_calories"
+                android:drawableLeft="@drawable/ic_calories"
+                android:drawablePadding="3dp"
+                android:paddingBottom="15dp"
+                android:textSize="14sp"
+                app:layout_constraintBaseline_toBaselineOf="@id/product_nutriscore"
+                app:layout_constraintEnd_toStartOf="@id/product_item_guideline_end"
+                app:layout_constraintStart_toEndOf="@id/product_nutriscore"
+                tools:text="234 kCal/part" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>

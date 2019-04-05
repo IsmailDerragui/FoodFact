@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">My Application</string>
+    <string name="produits">My Products</string>
+    <string name="details">Detail</string>
+</resources>

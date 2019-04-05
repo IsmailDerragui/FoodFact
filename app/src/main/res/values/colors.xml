@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#0EAD69</color>
+    <color name="colorPrimaryDark">#13955E</color>
+    <color name="toolbar_gradient_start">#13955E</color>
+    <color name="toolbar_gradient_end">#81D74E</color>
+    <color name="icon_selected">#0EAD69</color>
+    <color name="icon_default">#E63E11</color>
+    <color name="nutrient_level_low">#85BB2F</color>
+    <color name="nutrient_level_moderate">#FDCB01</color>
+    <color name="nutrient_level_high">#E63E12</color>
+    <color name="colorAccent">#13955E</color>
+    <color name="main_navigation_bg">#EBEBEB</color>
+</resources>
